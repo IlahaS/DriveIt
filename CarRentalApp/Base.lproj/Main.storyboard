@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QY0-BY-7Ez">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search-->
+        <scene sceneID="SHQ-S9-1Zm">
+            <objects>
+                <viewController storyboardIdentifier="SearchController" id="FaR-6r-rRs" customClass="SearchController" customModule="CarRentalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XD0-QU-fQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a car" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgt-rg-45X">
+                                <rect key="frame" x="36" y="119" width="321" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="j8B-Vs-gYl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="M6J-F5-09V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jgt-rg-45X" firstAttribute="leading" secondItem="M6J-F5-09V" secondAttribute="leading" constant="36" id="0Gb-55-BTX"/>
+                            <constraint firstItem="Jgt-rg-45X" firstAttribute="top" secondItem="M6J-F5-09V" secondAttribute="top" constant="16" id="Grn-Ok-KMT"/>
+                            <constraint firstItem="M6J-F5-09V" firstAttribute="trailing" secondItem="Jgt-rg-45X" secondAttribute="trailing" constant="36" id="s5c-fx-s9h"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Search" id="4gz-YV-Z9w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zDM-Lh-5Wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006.8702290076335" y="-194.36619718309859"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9TE-yf-gep">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="Z3C-Kv-pNa" customClass="TabBarController" customModule="CarRentalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hTU-jF-hX0">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uG6-LL-JtD" kind="relationship" relationship="viewControllers" id="5pk-l1-ESi"/>
+                        <segue destination="BYG-YU-bdf" kind="relationship" relationship="viewControllers" id="r0w-18-vX5"/>
+                        <segue destination="OD9-eB-BTz" kind="relationship" relationship="viewControllers" id="VjX-KL-qKv"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D5s-Nk-hxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="-194"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="4BI-Es-Nds">
+            <objects>
+                <viewController storyboardIdentifier="LoginController" id="QY0-BY-7Ez" customClass="LoginController" customModule="CarRentalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z2N-6M-KLs">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Jt1-Ab-vBi">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xEm-cS-18R">
+                                <rect key="frame" x="90" y="91" width="213" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="rWg-lL-tck"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="driveit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fh-dJ-bik">
+                                <rect key="frame" x="80" y="293" width="233" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hQJ-T6-0LI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="52"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAz-fx-Pz0">
+                                <rect key="frame" x="56" y="383" width="281" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Uxc-CY-YQr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZN-Q8-vGd">
+                                <rect key="frame" x="56" y="468" width="281" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="7i0-pN-axU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwy-dg-cTg">
+                                <rect key="frame" x="56" y="563" width="281" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="HTb-KU-kyh"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LOG IN">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                    <color key="baseBackgroundColor" red="0.16454222484638814" green="0.16454222484638814" blue="0.16454222484638814" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonClicked:" destination="QY0-BY-7Ez" eventType="touchUpInside" id="9xu-W3-qd2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9d8-Yh-ybr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xEm-cS-18R" firstAttribute="top" secondItem="9d8-Yh-ybr" secondAttribute="top" constant="32" id="017-Bm-su1"/>
+                            <constraint firstItem="Iwy-dg-cTg" firstAttribute="top" secondItem="lZN-Q8-vGd" secondAttribute="bottom" constant="40" id="0fM-x7-6jB"/>
+                            <constraint firstItem="lZN-Q8-vGd" firstAttribute="top" secondItem="fAz-fx-Pz0" secondAttribute="bottom" constant="30" id="2V9-pH-Nr4"/>
+                            <constraint firstItem="fAz-fx-Pz0" firstAttribute="top" secondItem="8fh-dJ-bik" secondAttribute="bottom" constant="40" id="5bd-Xl-dtm"/>
+                            <constraint firstItem="Iwy-dg-cTg" firstAttribute="leading" secondItem="lZN-Q8-vGd" secondAttribute="leading" id="7I3-IF-Gas"/>
+                            <constraint firstItem="Iwy-dg-cTg" firstAttribute="trailing" secondItem="lZN-Q8-vGd" secondAttribute="trailing" id="9SF-u6-J4d"/>
+                            <constraint firstItem="8fh-dJ-bik" firstAttribute="leading" secondItem="9d8-Yh-ybr" secondAttribute="leading" constant="80" id="BNY-ig-eeH"/>
+                            <constraint firstItem="Jt1-Ab-vBi" firstAttribute="trailing" secondItem="9d8-Yh-ybr" secondAttribute="trailing" id="Dvf-d8-XAo"/>
+                            <constraint firstItem="9d8-Yh-ybr" firstAttribute="trailing" secondItem="xEm-cS-18R" secondAttribute="trailing" constant="90" id="GHC-Ad-5EG"/>
+                            <constraint firstItem="lZN-Q8-vGd" firstAttribute="leading" secondItem="fAz-fx-Pz0" secondAttribute="leading" id="M8U-We-aho"/>
+                            <constraint firstItem="9d8-Yh-ybr" firstAttribute="trailing" secondItem="8fh-dJ-bik" secondAttribute="trailing" constant="80" id="XHW-Mo-TTE"/>
+                            <constraint firstItem="xEm-cS-18R" firstAttribute="leading" secondItem="9d8-Yh-ybr" secondAttribute="leading" constant="90" id="XkE-WF-nIc"/>
+                            <constraint firstItem="Jt1-Ab-vBi" firstAttribute="leading" secondItem="9d8-Yh-ybr" secondAttribute="leading" id="ZDN-36-Wnf"/>
+                            <constraint firstItem="8fh-dJ-bik" firstAttribute="top" secondItem="xEm-cS-18R" secondAttribute="bottom" constant="32" id="egz-VB-fPe"/>
+                            <constraint firstItem="lZN-Q8-vGd" firstAttribute="trailing" secondItem="fAz-fx-Pz0" secondAttribute="trailing" id="giS-t9-Wfr"/>
+                            <constraint firstItem="Jt1-Ab-vBi" firstAttribute="top" secondItem="z2N-6M-KLs" secondAttribute="top" id="huS-ME-iHm"/>
+                            <constraint firstItem="fAz-fx-Pz0" firstAttribute="leading" secondItem="9d8-Yh-ybr" secondAttribute="leading" constant="56" id="jXk-8o-bbI"/>
+                            <constraint firstItem="Jt1-Ab-vBi" firstAttribute="leading" secondItem="9d8-Yh-ybr" secondAttribute="leading" id="kKp-98-46k"/>
+                            <constraint firstItem="9d8-Yh-ybr" firstAttribute="trailing" secondItem="fAz-fx-Pz0" secondAttribute="trailing" constant="56" id="q9O-xp-UM2"/>
+                            <constraint firstAttribute="bottom" secondItem="Jt1-Ab-vBi" secondAttribute="bottom" id="vhm-Dp-app"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="password" destination="lZN-Q8-vGd" id="x7H-4b-CGl"/>
+                        <outlet property="username" destination="fAz-fx-Pz0" id="1Ga-pT-OFQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HO5-Dp-Wd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1337" y="-194"/>
+        </scene>
+        <!--Car Rental-->
+        <scene sceneID="edN-GI-Fp3">
+            <objects>
+                <viewController storyboardIdentifier="VehicleController" id="Fbi-S3-j8R" customClass="VehicleController" customModule="CarRentalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Ka-k0-Itv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="e8N-lM-R1L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Car Rental" id="8lA-xD-LJw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aa8-du-mBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="-920"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="DGu-s2-MRY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYG-YU-bdf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="searchTab" id="sno-xr-Y8q"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zBf-OK-NXF">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FaR-6r-rRs" kind="relationship" relationship="rootViewController" id="fsO-7R-TJt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HNM-dW-vYV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237" y="-194"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="Hau-4R-ahE">
+            <objects>
+                <viewController storyboardIdentifier="PofileController" id="lwh-9E-6KD" customClass="ProfileController" customModule="CarRentalApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FMF-0g-ue7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZGL-zL-CW4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Profile" id="9AU-rp-GMv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARN-84-44P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007" y="506"/>
+        </scene>
+        <!--Account-->
+        <scene sceneID="vKj-Py-44o">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OD9-eB-BTz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Account" image="accuntTab" id="0Xu-Mj-IDL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Dgn-hE-4Ak">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lwh-9E-6KD" kind="relationship" relationship="rootViewController" id="6Eg-Av-ufB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kXN-p9-xwW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="506"/>
+        </scene>
+        <!--Vehicles-->
+        <scene sceneID="bwi-4z-JhI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uG6-LL-JtD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Vehicles" image="vehiclesTab" id="ghT-mw-EYA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="7VJ-04-rCu">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fbi-S3-j8R" kind="relationship" relationship="rootViewController" id="xCX-ED-53s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9T-5h-OOZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="236" y="-920"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="accuntTab" width="29" height="28"/>
+        <image name="launchBackground" width="414" height="896"/>
+        <image name="logo" width="122" height="146"/>
+        <image name="searchTab" width="28" height="28"/>
+        <image name="vehiclesTab" width="28" height="28"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
