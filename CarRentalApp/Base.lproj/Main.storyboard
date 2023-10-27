@@ -16,24 +16,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search a car" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jgt-rg-45X">
-                                <rect key="frame" x="36" y="119" width="321" height="55"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="osN-T9-hup">
+                                <rect key="frame" x="24" y="119" width="345" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="j8B-Vs-gYl"/>
+                                    <constraint firstAttribute="height" constant="50" id="FsR-Ql-elb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hlZ-Yi-TzN">
+                                <rect key="frame" x="0.0" y="185" width="393" height="584"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="S3R-Ki-CLa">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZXX-hv-Jl4">
+                                <rect key="frame" x="319.33333333333331" y="118" width="49.666666666666686" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="R3L-Mp-usH"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                                    <color key="baseForegroundColor" red="0.074791925800000006" green="0.074791925800000006" blue="0.074791925800000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="FaR-6r-rRs" eventType="touchUpInside" id="ZY1-Of-BRP"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M6J-F5-09V"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="Jgt-rg-45X" firstAttribute="leading" secondItem="M6J-F5-09V" secondAttribute="leading" constant="36" id="0Gb-55-BTX"/>
-                            <constraint firstItem="Jgt-rg-45X" firstAttribute="top" secondItem="M6J-F5-09V" secondAttribute="top" constant="16" id="Grn-Ok-KMT"/>
-                            <constraint firstItem="M6J-F5-09V" firstAttribute="trailing" secondItem="Jgt-rg-45X" secondAttribute="trailing" constant="36" id="s5c-fx-s9h"/>
+                            <constraint firstItem="hlZ-Yi-TzN" firstAttribute="leading" secondItem="M6J-F5-09V" secondAttribute="leading" id="4iC-0s-zar"/>
+                            <constraint firstItem="M6J-F5-09V" firstAttribute="trailing" secondItem="ZXX-hv-Jl4" secondAttribute="trailing" constant="24" id="9S4-iY-ESq"/>
+                            <constraint firstItem="ZXX-hv-Jl4" firstAttribute="firstBaseline" secondItem="osN-T9-hup" secondAttribute="firstBaseline" id="Dgp-vW-C6h"/>
+                            <constraint firstItem="M6J-F5-09V" firstAttribute="bottom" secondItem="hlZ-Yi-TzN" secondAttribute="bottom" id="HdN-xd-6R6"/>
+                            <constraint firstItem="M6J-F5-09V" firstAttribute="trailing" secondItem="osN-T9-hup" secondAttribute="trailing" constant="24" id="YNR-o4-PfG"/>
+                            <constraint firstItem="M6J-F5-09V" firstAttribute="trailing" secondItem="hlZ-Yi-TzN" secondAttribute="trailing" id="ZHK-m7-YDr"/>
+                            <constraint firstItem="hlZ-Yi-TzN" firstAttribute="top" secondItem="osN-T9-hup" secondAttribute="bottom" constant="16" id="fm2-d5-uSh"/>
+                            <constraint firstItem="osN-T9-hup" firstAttribute="top" secondItem="M6J-F5-09V" secondAttribute="top" constant="16" id="fsU-Z1-cTb"/>
+                            <constraint firstItem="osN-T9-hup" firstAttribute="leading" secondItem="M6J-F5-09V" secondAttribute="leading" constant="24" id="gFv-wg-kYC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="4gz-YV-Z9w"/>
+                    <connections>
+                        <outlet property="collection" destination="hlZ-Yi-TzN" id="kTa-M7-RDu"/>
+                        <outlet property="searchText" destination="osN-T9-hup" id="tA5-Qa-3cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDM-Lh-5Wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,14 +190,68 @@
                     <view key="view" contentMode="scaleToFill" id="3Ka-k0-Itv">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hrA-Fo-V48">
+                                <rect key="frame" x="0.0" y="177" width="393" height="592"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ngq-RD-2CY">
+                                    <size key="itemSize" width="360" height="360"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RTU-Y8-9AE">
+                                <rect key="frame" x="24" y="119" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0hD-tI-iaD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <connections>
+                                    <action selector="searchAction:" destination="Fbi-S3-j8R" eventType="editingChanged" id="Hzc-eu-Tl3"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjl-od-AI6">
+                                <rect key="frame" x="319" y="119" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4Ti-x4-zc1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system">
+                                    <color key="baseForegroundColor" red="0.074791925800000006" green="0.074791925800000006" blue="0.074791925800000006" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="searchButtonTapped:" destination="Fbi-S3-j8R" eventType="touchUpInside" id="AcP-ng-4G2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="e8N-lM-R1L"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hrA-Fo-V48" firstAttribute="leading" secondItem="e8N-lM-R1L" secondAttribute="leading" id="4wx-3J-C5E"/>
+                            <constraint firstItem="e8N-lM-R1L" firstAttribute="trailing" secondItem="hrA-Fo-V48" secondAttribute="trailing" id="6M4-CA-59b"/>
+                            <constraint firstItem="RTU-Y8-9AE" firstAttribute="top" secondItem="e8N-lM-R1L" secondAttribute="top" constant="16" id="GoW-8A-ikA"/>
+                            <constraint firstItem="hrA-Fo-V48" firstAttribute="top" secondItem="RTU-Y8-9AE" secondAttribute="bottom" constant="8" symbolic="YES" id="KMt-ah-f4z"/>
+                            <constraint firstItem="e8N-lM-R1L" firstAttribute="trailing" secondItem="RTU-Y8-9AE" secondAttribute="trailing" constant="24" id="TEC-C6-aG6"/>
+                            <constraint firstItem="RTU-Y8-9AE" firstAttribute="leading" secondItem="e8N-lM-R1L" secondAttribute="leading" constant="24" id="UTC-7m-bfO"/>
+                            <constraint firstItem="RTU-Y8-9AE" firstAttribute="centerX" secondItem="3Ka-k0-Itv" secondAttribute="centerX" id="kaM-WA-udT"/>
+                            <constraint firstItem="e8N-lM-R1L" firstAttribute="trailing" secondItem="hjl-od-AI6" secondAttribute="trailing" constant="24" id="kn6-Zz-4gu"/>
+                            <constraint firstItem="e8N-lM-R1L" firstAttribute="bottom" secondItem="hrA-Fo-V48" secondAttribute="bottom" id="lXV-eo-WeL"/>
+                            <constraint firstItem="hjl-od-AI6" firstAttribute="top" secondItem="RTU-Y8-9AE" secondAttribute="top" id="vif-A9-5Ty"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Car Rental" id="8lA-xD-LJw"/>
+                    <connections>
+                        <outlet property="collection" destination="hrA-Fo-V48" id="4kI-9d-qsy"/>
+                        <outlet property="searchField" destination="RTU-Y8-9AE" id="94O-eQ-cQx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa8-du-mBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="-920"/>
+            <point key="canvasLocation" x="1006.8702290076335" y="-920.4225352112677"/>
         </scene>
         <!--Search-->
         <scene sceneID="DGu-s2-MRY">
@@ -243,10 +331,14 @@
         <image name="accuntTab" width="29" height="28"/>
         <image name="launchBackground" width="414" height="896"/>
         <image name="logo" width="122" height="146"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="searchTab" width="28" height="28"/>
         <image name="vehiclesTab" width="28" height="28"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

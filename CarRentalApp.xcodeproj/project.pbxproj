@@ -16,6 +16,14 @@
 		38CB30262AE6E8BD00FEBA73 /* CarInfo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB30242AE6E8BD00FEBA73 /* CarInfo+CoreDataProperties.swift */; };
 		38CB302E2AE85F7100FEBA73 /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB302C2AE85F7100FEBA73 /* CarCell.swift */; };
 		38CB302F2AE85F7100FEBA73 /* CarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CB302D2AE85F7100FEBA73 /* CarCell.xib */; };
+		38CB30332AE970A300FEBA73 /* carCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB30312AE970A300FEBA73 /* carCategoryCell.swift */; };
+		38CB30342AE970A300FEBA73 /* carCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CB30322AE970A300FEBA73 /* carCategoryCell.xib */; };
+		38CB30432AE9B16400FEBA73 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 38CB30422AE9B16400FEBA73 /* Realm */; };
+		38CB30452AE9B16400FEBA73 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 38CB30442AE9B16400FEBA73 /* RealmSwift */; };
+		38CB304A2AEB010B00FEBA73 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB30492AEB010B00FEBA73 /* RealmManager.swift */; };
+		38CB304C2AEB058700FEBA73 /* CarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB304B2AEB058700FEBA73 /* CarManager.swift */; };
+		38CB304F2AEBC0F200FEBA73 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38CB304D2AEBC0F200FEBA73 /* CollectionViewCell.swift */; };
+		38CB30502AEBC0F200FEBA73 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38CB304E2AEBC0F200FEBA73 /* CollectionViewCell.xib */; };
 		FE9D309C2AE3A6040004F029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D309B2AE3A6040004F029 /* AppDelegate.swift */; };
 		FE9D309E2AE3A6040004F029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9D309D2AE3A6040004F029 /* SceneDelegate.swift */; };
 		FE9D30A32AE3A6040004F029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE9D30A12AE3A6040004F029 /* Main.storyboard */; };
@@ -34,6 +42,12 @@
 		38CB30242AE6E8BD00FEBA73 /* CarInfo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarInfo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		38CB302C2AE85F7100FEBA73 /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		38CB302D2AE85F7100FEBA73 /* CarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarCell.xib; sourceTree = "<group>"; };
+		38CB30312AE970A300FEBA73 /* carCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = carCategoryCell.swift; sourceTree = "<group>"; };
+		38CB30322AE970A300FEBA73 /* carCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = carCategoryCell.xib; sourceTree = "<group>"; };
+		38CB30492AEB010B00FEBA73 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		38CB304B2AEB058700FEBA73 /* CarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarManager.swift; sourceTree = "<group>"; };
+		38CB304D2AEBC0F200FEBA73 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		38CB304E2AEBC0F200FEBA73 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		FE9D30982AE3A6040004F029 /* CarRentalApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarRentalApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9D309B2AE3A6040004F029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE9D309D2AE3A6040004F029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38CB30452AE9B16400FEBA73 /* RealmSwift in Frameworks */,
+				38CB30432AE9B16400FEBA73 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +76,10 @@
 			children = (
 				38CB30162AE482BA00FEBA73 /* LoginController.swift */,
 				38CB301A2AE4830900FEBA73 /* TabBarController.swift */,
-				38CB301C2AE4832E00FEBA73 /* SearchController.swift */,
 				38CB301E2AE4834100FEBA73 /* VehicleController.swift */,
+				38CB301C2AE4832E00FEBA73 /* SearchController.swift */,
 				38CB30202AE4835200FEBA73 /* ProfileController.swift */,
+				38CB30482AEB00E100FEBA73 /* Model */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -72,8 +89,21 @@
 			children = (
 				38CB302C2AE85F7100FEBA73 /* CarCell.swift */,
 				38CB302D2AE85F7100FEBA73 /* CarCell.xib */,
+				38CB30312AE970A300FEBA73 /* carCategoryCell.swift */,
+				38CB30322AE970A300FEBA73 /* carCategoryCell.xib */,
+				38CB304D2AEBC0F200FEBA73 /* CollectionViewCell.swift */,
+				38CB304E2AEBC0F200FEBA73 /* CollectionViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		38CB30482AEB00E100FEBA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				38CB30492AEB010B00FEBA73 /* RealmManager.swift */,
+				38CB304B2AEB058700FEBA73 /* CarManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		FE9D308F2AE3A6040004F029 = {
@@ -126,6 +156,10 @@
 			dependencies = (
 			);
 			name = CarRentalApp;
+			packageProductDependencies = (
+				38CB30422AE9B16400FEBA73 /* Realm */,
+				38CB30442AE9B16400FEBA73 /* RealmSwift */,
+			);
 			productName = CarRentalApp;
 			productReference = FE9D30982AE3A6040004F029 /* CarRentalApp.app */;
 			productType = "com.apple.product-type.application";
@@ -154,6 +188,9 @@
 				Base,
 			);
 			mainGroup = FE9D308F2AE3A6040004F029;
+			packageReferences = (
+				38CB30412AE9B16400FEBA73 /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = FE9D30992AE3A6040004F029 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -170,7 +207,9 @@
 			files = (
 				FE9D30AB2AE3A6060004F029 /* LaunchScreen.storyboard in Resources */,
 				FE9D30A82AE3A6060004F029 /* Assets.xcassets in Resources */,
+				38CB30502AEBC0F200FEBA73 /* CollectionViewCell.xib in Resources */,
 				38CB302F2AE85F7100FEBA73 /* CarCell.xib in Resources */,
+				38CB30342AE970A300FEBA73 /* carCategoryCell.xib in Resources */,
 				FE9D30A32AE3A6040004F029 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,12 +225,16 @@
 				38CB30172AE482BA00FEBA73 /* LoginController.swift in Sources */,
 				38CB301D2AE4832E00FEBA73 /* SearchController.swift in Sources */,
 				38CB301B2AE4830900FEBA73 /* TabBarController.swift in Sources */,
+				38CB30332AE970A300FEBA73 /* carCategoryCell.swift in Sources */,
+				38CB304F2AEBC0F200FEBA73 /* CollectionViewCell.swift in Sources */,
+				38CB304A2AEB010B00FEBA73 /* RealmManager.swift in Sources */,
 				38CB30262AE6E8BD00FEBA73 /* CarInfo+CoreDataProperties.swift in Sources */,
 				38CB302E2AE85F7100FEBA73 /* CarCell.swift in Sources */,
 				38CB30252AE6E8BD00FEBA73 /* CarInfo+CoreDataClass.swift in Sources */,
 				38CB30212AE4835200FEBA73 /* ProfileController.swift in Sources */,
 				FE9D30A62AE3A6040004F029 /* CarRentalApp.xcdatamodeld in Sources */,
 				38CB301F2AE4834100FEBA73 /* VehicleController.swift in Sources */,
+				38CB304C2AEB058700FEBA73 /* CarManager.swift in Sources */,
 				FE9D309E2AE3A6040004F029 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +458,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		38CB30412AE9B16400FEBA73 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		38CB30422AE9B16400FEBA73 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38CB30412AE9B16400FEBA73 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		38CB30442AE9B16400FEBA73 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 38CB30412AE9B16400FEBA73 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FE9D30A42AE3A6040004F029 /* CarRentalApp.xcdatamodeld */ = {

@@ -10,6 +10,7 @@ class CarCell: UICollectionViewCell {
     @IBOutlet weak var carEngine: UILabel!
     @IBOutlet weak var carImage: UIImageView!
     
+//    collectionView.register(UINib(nibName: "CollectionCell", bundle: .main), forCellWithReuseIdentifier: "collectionCell")
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
